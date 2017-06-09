@@ -1,0 +1,9 @@
+[submodule "dep/AtomicGameEngine"]
+	path = dep/AtomicGameEngine
+	url = https://github.com/AtomicGameEngine/AtomicGameEngine.git
+[submodule "dep/AtomicImGUI"]
+	path = dep/AtomicImGUI
+	url = git@github.com:rokups/AtomicImGUI.git
+[submodule "dep/AtomicNuklearUI"]
+	path = dep/AtomicNuklearUI
+	url = https://github.com/rokups/AtomicNuklearUI.git
