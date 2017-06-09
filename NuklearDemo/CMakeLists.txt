@@ -21,4 +21,6 @@
 #
 add_executable(NuklearDemo NuklearDemo.cpp)
 target_link_libraries(NuklearDemo AtomicNuklearUI)
-target_compile_options(NuklearDemo PRIVATE -std=c++11)
+if (NOT MSVC)
+    target_compile_options(NuklearDemo PRIVATE -std=c++11)
+endif ()

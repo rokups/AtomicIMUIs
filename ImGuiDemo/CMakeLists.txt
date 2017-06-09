@@ -21,4 +21,6 @@
 #
 add_executable(ImGuiDemo ImGuiDemo.cpp ${CMAKE_SOURCE_DIR}/dep/AtomicImGUI/imgui/imgui_demo.cpp)
 target_link_libraries(ImGuiDemo AtomicImGUI)
-target_compile_options(ImGuiDemo PRIVATE -std=c++11)
+if (NOT MSVC)
+    target_compile_options(ImGuiDemo PRIVATE -std=c++11)
+endif ()
