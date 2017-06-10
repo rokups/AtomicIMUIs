@@ -41,10 +41,13 @@ extern "C"
 {
 #define LEN(a) (sizeof(a)/sizeof(a)[0])
 #include <limits.h>
-#include "../dep/AtomicNuklearUI/nuklear/demo/overview.c"
-#include "../dep/AtomicNuklearUI/nuklear/demo/style.c"
-#include "../dep/AtomicNuklearUI/nuklear/demo/calculator.c"
-#include "../dep/AtomicNuklearUI/nuklear/demo/node_editor.c"
+#if _WIN32
+#	include <time.h>
+#endif
+#include <AtomicNuklearUI/nuklear/demo/overview.c>
+#include <AtomicNuklearUI/nuklear/demo/style.c>
+#include <AtomicNuklearUI/nuklear/demo/calculator.c>
+#include <AtomicNuklearUI/nuklear/demo/node_editor.c>
 };
 
 class NuklearDemo

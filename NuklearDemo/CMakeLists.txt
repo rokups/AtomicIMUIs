@@ -19,7 +19,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-add_executable(NuklearDemo NuklearDemo.cpp)
+if (WIN32)
+    set(PLATFORM WIN32)
+endif ()
+add_executable(NuklearDemo ${PLATFORM} NuklearDemo.cpp)
 target_link_libraries(NuklearDemo AtomicNuklearUI)
 if (NOT MSVC)
     target_compile_options(NuklearDemo PRIVATE -std=c++11)

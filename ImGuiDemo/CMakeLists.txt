@@ -19,7 +19,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-add_executable(ImGuiDemo ImGuiDemo.cpp ${CMAKE_SOURCE_DIR}/dep/AtomicImGUI/imgui/imgui_demo.cpp)
+if (WIN32)
+    set(PLATFORM WIN32)
+endif ()
+add_executable(ImGuiDemo ${PLATFORM} ImGuiDemo.cpp)
 target_link_libraries(ImGuiDemo AtomicImGUI)
 if (NOT MSVC)
     target_compile_options(ImGuiDemo PRIVATE -std=c++11)

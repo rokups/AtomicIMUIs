@@ -32,7 +32,7 @@
 
 #include <IconsFontAwesome.h>
 #include <AtomicImGUI.h>
-
+#include <AtomicImGUI/imgui/imgui_demo.cpp>
 
 using namespace Atomic;
 
